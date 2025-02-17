@@ -1,0 +1,573 @@
+:root {
+  /* Główne kolory */
+  --body-background-color: #000;
+  --body-color: #a9a195;
+
+  --header-background-color: #333;
+  --header-color: #ed7c7c;
+
+  --nav-background-color: #444;
+  --nav-color: #dbdbdb;
+  --nav-active-background-color: #4f3030;
+  --nav-active-border-color: #cf4c4c;
+  --nav-active-hover-color: #f84848;
+  --nav-hover-color: #f84848;
+  --nav-module-color: #6fb250;
+
+  --nav-details-summary-color: #f84848;
+  --nav-details-active-open-color-text: #f8bc48;
+  --nav-summary-active-open-border-left-color: #ffffff50;
+  --nav-summary-active-open-background-color: #00000050;
+
+  --content-background-color: #181818;
+  --content-border-color: #633232;
+  --content-details-summary-color: #d96262;
+
+  --footer-background-color: #333;
+  --footer-color: #fff;
+
+  /* Kolory podpowiedzi */
+  --hint-text-color: #d9d9d9;
+
+  --hint-info-background-color: #254c70;
+  --hint-info-border-color: #2196f3;
+
+  --hint-success-background-color: #2e4e20;
+  --hint-success-border-color: #4caf50;
+
+  --hint-warning-background-color: #352c06;
+  --hint-warning-border-color: #ffe600;
+
+  --hint-danger-background-color: #521a1a;
+  --hint-danger-border-color: #f44336;
+
+  /* Kolory kodu */
+  /* Kolory przycisku kopiuj kod */
+  --code-background-color: #333;
+  --code-color: #d1d1d1;
+  --copy-button-background-color: #594949;
+  --copy-button-hover-background-color: #3a2e2e;
+  --copy-button-color: #d5d5d5;
+
+  /* Kolory tabel */
+  --table-color: #c7c2b8;
+  --table-header-background-color: #302424;
+  --table-header-color: #d9d9d9;
+  --table-border-color: #633232;
+
+  /* Kolory zakładek */
+  --tabs-background-color: #252525;
+  --tabs-border-color: #75716b;
+}
+a{
+  color: cornflowerblue;
+}
+a:visited,
+a.active {
+  color: mediumorchid;
+}
+
+em {
+  color: #7e8369;
+}
+strong {
+  color: #96856b;
+}
+strong *{
+  font-weight: bolder;
+}
+strong>em{
+  color: #acacac;
+}
+em>strong{
+  color: #5e7583;
+}
+#content>h1,
+#content>h2,
+#content>h3 {
+  display: inline-block;
+}
+#content h1,
+#content h2,
+#content h3 {
+  border-bottom: 2px solid #c0fffc42;
+  padding: 0 15px 0px 5px;
+  border-radius: 8px;
+}
+
+#content>h1:first-of-type {
+  display: block;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #ffffff10;
+  margin: 0;
+  padding: 5px;
+  border-bottom: 2px solid var(--body-color);
+  border-radius: 0;
+}
+
+body,
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-background-color);
+  color: var(--body-color);
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: var(--header-background-color);
+  color: var(--header-color);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  font-size: xx-small;
+  font-family: monospace;
+}
+
+header h1 {
+  width: calc(100% - 70px);
+  margin-left: 5px;
+}
+
+header img {
+  height: 60px;
+  position: relative;
+}
+.container {
+  display: flex;
+  min-height: calc(100vh - 120px);
+}
+
+main {
+  position: relative;
+  left: 17%;
+  width: 60%;
+}
+
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--footer-color);
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  top: 50px;
+  width: 100%;
+}
+
+nav {
+  width: 13%;
+  background-color: var(--nav-background-color);
+  color: var(--nav-color);
+  padding: 20px;
+  height: calc(100vh - 100px);
+  top: 60px;
+  position: fixed;
+  overflow-y: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+nav a:visited {
+  color: var(--nav-color);
+}
+nav > ul > li ul {
+  padding-left: 15px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0 0 0 5px;
+  border-left: 1px solid var(--nav-color);
+}
+
+nav ul li {
+  padding: 5px 0;
+}
+nav ul li.module {
+    color: var(--nav-module-color);
+    font-weight: bolder;
+}
+
+nav ul li a {
+  color: var(--nav-color);
+  text-decoration: none;
+  width: calc(100% - 15px);
+  display: block;
+}
+
+nav ul li.active {
+  background-color: var(--nav-active-background-color);
+  border-left: 5px solid var(--nav-active-border-color);
+  padding-left: 3px;
+}
+nav ul summary li.active {
+    background-color: var(--nav-summary-active-open-background-color);
+    border-left: 5px solid var(--nav-summary-active-open-border-left-color);
+  }
+nav ul summary li.active a {
+    color: var(--nav-details-active-open-color-text);
+  }
+
+
+nav ul li.active a,
+nav ul li a:hover {
+  color: var(--nav-active-hover-color);
+}
+
+nav ul li details {
+  color: var(--nav-details-summary-color);
+}
+
+nav ul li details summary {
+  list-style-type: none;
+  position: relative;
+  cursor: pointer;
+}
+
+details summary::after {
+  content: "\23F5";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+details[open] summary::after {
+  content: "\23F6";
+}
+
+li.indent-h2 a{
+    color: #ccc
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #555; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ccc; 
+  }
+
+/* 
+###########################################################
+#           STYLE ZAWARTOŚCI W DIV # CONTENT              #
+###########################################################
+*/
+
+#content {
+  margin-top: 80px;
+  padding: 10px;
+  background-color: var(--content-background-color);
+  border: 1px solid var(--content-border-color);
+  border-radius: 5px;
+  line-height: 1.8;
+}
+
+#content details {
+  border: 1px solid var(--content-border-color);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#content details summary {
+  font-size: 20px;
+  color: var(--content-details-summary-color);
+  cursor: pointer;
+}
+
+#content details summary::after {
+  content: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* 
+###########################################################
+#     PRAWE MENU NAWIGACYJNE PO STRONIE DOKUMENTACJI      #
+###########################################################
+*/
+
+nav.sidebar {
+  right: 0;
+  background: transparent;
+}
+
+.indent-h2 {
+  margin-left: 20px;
+}
+
+.indent-h3 {
+  margin-left: 40px;
+}
+
+/* 
+###########################################################
+#      DODATKOWE FORMATOWANIE TEKSTU DLA WYRÓŻNIENIA      #
+###########################################################
+*/
+
+code {
+  background-color: var(--code-background-color);
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: var(--code-color);
+}
+.code-header {
+  background-color: var(--code-background-color);
+  padding: 5px!important;
+  border-radius: 5px!important;
+  color: var(--code-color);
+  margin: 0 0 -20px 3px!important;
+  width: fit-content;
+}
+
+/* 
+###########################################################
+#         STYLIZACJA BLOKÓW KODÓW PROGRAMOWANIA           #
+###########################################################
+*/
+
+pre {
+  background-color: var(--code-background-color);
+  padding: 15px 5px 5px 5px;
+  border-radius: 5px;
+  overflow-x: auto;
+  position: relative;
+  font-size: 16px;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--copy-button-background-color);
+  color: var(--copy-button-color);
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-bottom-left-radius: 10px;
+}
+.copy-button:hover {
+  background-color: var(--copy-button-hover-background-color);
+}
+
+/* 
+###########################################################
+#   MODYFIKACJA UŁOŻENIA BLOKU MATEMATYCZNEGO W TEKŚCIE   #
+###########################################################
+*/
+
+.katex-display {
+  display: inline-block !important;
+  margin: 0 !important;
+}
+
+/* 
+###########################################################
+#               ZAKŁADKI Z KONWENTEM                      #
+###########################################################
+*/
+
+[data-tabs] {
+  display: flex;
+  flex-direction: column;
+}
+
+[data-tabs] > div > * {
+  display: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+[data-tabs] > div.active {
+  border: 1px solid var(--tabs-border-color);
+  margin-top: -12px;
+  background-color: var(--tabs-background-color);
+}
+
+[data-tabs] > div.tabs{
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 72px;
+  white-space: nowrap;
+}
+
+[data-tabs] > div.active > * {
+  display: block;
+}
+[data-tabs] > .tabs b.active {
+  z-index: 2;
+  position: relative;
+  background-color: var(--tabs-background-color);
+  top: 1px;
+}
+[data-tabs] > .tabs > b {
+  display: inline-block;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin: 10px 0;
+  border: 1px solid var(--tabs-border-color);
+  cursor: pointer;
+  font-size: medium;
+  border-bottom: 2px solid var(--tabs-background-color);
+}
+
+/* 
+###########################################################
+#      SPECJALNIE WYRÓŻNIONE FRAGMENTY DOKUMENTU          #
+###########################################################
+*/
+
+[data-hint] {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.hint-info {
+  background-color: var(--hint-info-background-color);
+  border-left: 16px solid var(--hint-info-border-color);
+  color: var(--hint-text-color);
+}
+
+.hint-success {
+  background-color: var(--hint-success-background-color);
+  border-left: 16px solid var(--hint-success-border-color);
+  color: var(--hint-text-color);
+}
+
+.hint-warning {
+  background-color: var(--hint-warning-background-color);
+  border-left: 16px solid var(--hint-warning-border-color);
+  color: var(--hint-text-color);
+}
+
+.hint-danger {
+  background-color: var(--hint-danger-background-color);
+  border-left: 16px solid var(--hint-danger-border-color);
+  color: var(--hint-text-color);
+}
+
+/* 
+###########################################################
+#                  STRONA ŁADOWANIA                       #
+###########################################################
+*/
+#loading-doc-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--content-background-color);
+  display: flex;
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#loading-doc-page > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#loading-doc-page img {
+  position: relative;
+  top: 143px;
+}
+.loader {
+  border: 16px solid var(--header-background-color);
+  border-top: 16px solid var(--header-color);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+table {
+  width: 100%;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  color: var(--table-color);
+}
+table thead {
+  border-collapse: unset;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  border: 1px solid var(--table-border-color);
+}
+
+thead th {
+    background-color: var(--table-header-background-color);
+    color: var(--table-header-color);
+}
+
+td,
+th {
+  border-right-color: transparent;
+}
+td {
+  border-bottom-color: transparent;
+  border-top: 2px dotted var(--table-border-color);
+}
+
+thead th:first-child {
+  border-top-left-radius: 20px;
+}
+
+thead th:last-child {
+  border-top-right-radius: 20px;
+  border-color: var(--table-border-color);
+}
+
+tbody th:first-child,
+tbody td:first-child {
+  border-left: 1px solid transparent;
+}
+
+tbody th:last-child,
+tbody td:last-child {
+  border-right: 1px solid transparent;
+}
+
+tbody tr:first-child th,
+tbody tr:first-child td {
+  border-top: 1px solid transparent;
+}
