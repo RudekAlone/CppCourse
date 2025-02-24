@@ -500,4 +500,25 @@ showLoadingPage(true, "Ładowanie komponentów...");
 const intervalId = setInterval(checkLibrariesLoaded, 300); // Check every 300ms
 
 
+// Fixed plus signs getting separated in "C++" words
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('div, li, details, summary, a'); // Dodajemy również linki
+
+    elements.forEach(element => {
+        processElement(element);
+    });
+
+    function processElement(element) {
+        element.childNodes.forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                const newNodeValue = node.nodeValue.replace(/C\+\+/g, 'C++');
+                const newNode = document.createElement('span');
+                newNode.innerHTML = newNodeValue.replace(/C\+\+/g, '<span style="white-space: nowrap;">C++</span>');
+                element.replaceChild(newNode, node);
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                processElement(node);
+            }
+        });
+    }
+});
 
