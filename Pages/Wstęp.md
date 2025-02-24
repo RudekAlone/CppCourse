@@ -5,4 +5,4 @@ Jego wszechstronność, wydajność i możliwość bezpośredniego zarządzania 
 
 W tym kursie skupimy się na nowoczesnych standardach ```C++```, takich jak ```C++11```, ```C++14```, ```C++17```, ```C++20```, a także najnowszych funkcjach wprowadzonych w `C++23`. Nauczymy się, jak pisać kod, który jest nie tylko wydajny, ale także czytelny i łatwy do utrzymania.
 
-![Logo](/Data/logo.webp)
+![Logo](../Data/logo.webp)
