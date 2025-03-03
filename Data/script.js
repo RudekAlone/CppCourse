@@ -129,6 +129,8 @@ function setupIndexPage() {
         });
     });
   });
+  wrapNonBreakingSpace(document.querySelector("nav>ul"));
+
 }
 
 // Funkcja findPreviousModule, która zwraca pierwszy element znajdujący się nad elementem, który posiada klasę module
@@ -250,6 +252,7 @@ function setupPage(targetPage) {
     //dodanie po header znaczniku br
     header.parentNode.insertBefore(brElement, header.nextSibling);
   });
+  wrapNonBreakingSpace(content);
 }
 
 function removeEmptyTHead() {
@@ -501,24 +504,31 @@ const intervalId = setInterval(checkLibrariesLoaded, 300); // Check every 300ms
 
 
 // Fixed plus signs getting separated in "C++" words
-document.addEventListener("DOMContentLoaded", function() {
-    const elements = document.querySelectorAll('div, li, details, summary, a'); // Dodajemy również linki
-
-    elements.forEach(element => {
-        processElement(element);
-    });
-
-    function processElement(element) {
-        element.childNodes.forEach(node => {
-            if (node.nodeType === Node.TEXT_NODE) {
-                const newNodeValue = node.nodeValue.replace(/C\+\+/g, 'C++');
-                const newNode = document.createElement('span');
-                newNode.innerHTML = newNodeValue.replace(/C\+\+/g, '<span style="white-space: nowrap;">C++</span>');
-                element.replaceChild(newNode, node);
-            } else if (node.nodeType === Node.ELEMENT_NODE) {
-                processElement(node);
-            }
-        });
+function wrapNonBreakingSpace(node) {
+  node.childNodes.forEach(child => {
+    if (child.nodeType === Node.TEXT_NODE) {
+      // Zmień tylko tekstowe węzły
+      const text = child.textContent;
+      const replacedText = text.replace(/C\+\+/g, '<span style="white-space: nowrap;">C++</span>');
+      if (replacedText !== text) {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = replacedText;
+        while (tempDiv.firstChild) {
+          child.before(tempDiv.firstChild);
+        }
+        child.remove();
+      }
+    } else if (child.nodeType === Node.ELEMENT_NODE) {
+      // Dla elementów a, zmień tylko tekst, nie href
+      if (child.tagName === 'A') {
+        const hrefValue = child.getAttribute('href');
+        wrapNonBreakingSpace(child);
+        child.setAttribute('href', hrefValue);
+      } else {
+        wrapNonBreakingSpace(child);
+      }
     }
-});
+  });
+}
+
 
