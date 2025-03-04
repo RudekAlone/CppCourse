@@ -88,6 +88,10 @@
 
 # 3.1.3 std::vector
 
+# 3.1.3 std::vector2
+
+# 3.1.3 std::vector3
+
 # 3.1.4 Ćwiczenia Tablica ASCII i szyfr cezara
 
 </details>
