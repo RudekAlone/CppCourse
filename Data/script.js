@@ -504,6 +504,7 @@ const intervalId = setInterval(checkLibrariesLoaded, 300); // Check every 300ms
 
 
 // Fixed plus signs getting separated in "C++" words
+
 function wrapNonBreakingSpace(node) {
   node.childNodes.forEach(child => {
     if (child.nodeType === Node.TEXT_NODE) {
