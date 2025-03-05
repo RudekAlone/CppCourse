@@ -84,15 +84,15 @@
 
 # 3.1.1 Tablice - Array
 
-# 3.1.2 std::string
+# 3.1.2 std::array
 
-# 3.1.3 std::vector
+# 3.1.3 std::string
 
-# 3.1.3 std::vector2
+# 3.1.4 std::vector
 
-# 3.1.3 std::vector3
+# 3.1.5 Wybór między tablicą a std::vector
 
-# 3.1.4 Ćwiczenia Tablica ASCII i szyfr cezara
+# 3.1.6 Ćwiczenia Tablica ASCII i szyfr cezara
 
 </details>
 
@@ -115,12 +115,18 @@
 
 </details>
 
+#### Moduł 4: Testowanie i optymalizacja
+
+# 4.1 Notacja dużego o (Omicron)
+
 <details>
 <summary>
 
-# 3.3 Wskaźniki i zarządzanie pamięcią
+# 4.2 Wskaźniki i zarządzanie pamięcią
 
 </summary>
+
+# 4.2.1 Stos i sterta
 
 # 3.3.1 Podstawy wskaźników
 
