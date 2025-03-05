@@ -113,6 +113,8 @@
 
 # 3.2.5 Enkapsulacja i hermetyzacja
 
+# 3.2.5 Interfejsy i klasy abstrakcyjne
+
 </details>
 
 #### Moduł 4: Testowanie i optymalizacja
