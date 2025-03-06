@@ -107,6 +107,8 @@
 
 # 3.2.2 Konstruktory i destruktory
 
+# 3.2.3 Program
+
 # 3.2.3 Dziedziczenie
 
 # 3.2.4 Polimorfizm
