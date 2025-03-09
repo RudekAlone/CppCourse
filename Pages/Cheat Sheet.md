@@ -57,10 +57,15 @@ Fragment kodu np.: let zmienna = 7;
 
 ```![Tekst alternatywny opisujący obraz, który jest wyświetlany, gdy obraz nie może zostać załadowany.](lokalizacja pliku obrazka)```  
 np.:  
-```![Zimowa góra.](/basic-preset-image.jpg)```
+```markdown
+![Zimowa góra.](/basic-preset-image.jpg)
+```
 
 ![Tekst alternatywny opisujący obraz, który jest wyświetlany, gdy obraz nie może zostać załadowany.](basic-preset-image.jpg)
 
+```markdown
+![tekst alternatywny](/Images/plik.png)
+```
  
 
 ## Listy automatyczne

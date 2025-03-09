@@ -373,7 +373,10 @@ pre {
 .copy-button:hover {
   background-color: var(--copy-button-hover-background-color);
 }
-
+pre, code {
+  tab-size: 4;
+  line-height: 1.5;
+}
 /* 
 ###########################################################
 #   MODYFIKACJA UŁOŻENIA BLOKU MATEMATYCZNEGO W TEKŚCIE   #
