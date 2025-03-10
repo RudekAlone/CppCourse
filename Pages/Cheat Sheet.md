@@ -17,7 +17,7 @@
 ```*Pochyły*``` *Pochyły*  
 ```__Pogrubiony__``` __Pogrubiony__  
 ```__*Pochyły i pogrubiony*__``` __*Pochyły i pogrubiony*__  
-Dodając na koniec lini co najmniej dwie spacje spowodujesz przejście do nowej lini nie kończąc akapitu.
+Dodając na koniec linii co najmniej dwie spacje spowodujesz przejście do nowej linii nie kończąc akapitu.
 
  
 
